@@ -156,7 +156,7 @@ namespace BanDongHoTTCS.DAO
         }
         public bool SuaDongHo(DongHo dongHo)
         {
-            string query = "EXEC SP_CAPNHAT_DONGHO @MADONGHO , @TENDONGHO , @GIA , @MOTA , @HINHANH , @MATRANGTHAI , @MALOAI , @MAHANG";
+            string query = "EXEC SP_CAPNHAT_DONGHO @MADONGHO , @TENDONGHO , @GIA , @MOTA , @HINHANH , @MALOAI , @MAHANG";
             try
             {
                 DataProvider.Instance.ExecuteNonQuerry(query, new object[]
@@ -166,7 +166,6 @@ namespace BanDongHoTTCS.DAO
                     dongHo.Gia,
                     dongHo.MoTa,
                     dongHo.HinhAnh,
-                    dongHo.TrangThai,
                     dongHo.Loai,
                     dongHo.Hang,
                 });

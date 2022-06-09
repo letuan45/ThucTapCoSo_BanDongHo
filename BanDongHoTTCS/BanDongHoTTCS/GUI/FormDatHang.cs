@@ -54,9 +54,9 @@ namespace BanDongHoTTCS.GUI
                 MessageBox.Show("Họ tên người nhận không được trống");
                 return false;
             }
-            if (txtSdtNN.Text.Equals(""))
+            if (!txtSdtKh.Text.StartsWith("0") || txtSdtKh.Text.Length != 10)
             {
-                MessageBox.Show("Số điện thoại người nhận không được trống");
+                MessageBox.Show("Số điện thoại phải đúng định dạng: Có 10 ký số và bắt đầu bằng 0");
                 return false;
             }
             if (txtDiaChiNN.Text.Equals(""))
@@ -145,6 +145,14 @@ namespace BanDongHoTTCS.GUI
         {
             ThemPhieuDat();
             
+        }
+
+        private void txtSdtKh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

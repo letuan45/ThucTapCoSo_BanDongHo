@@ -167,10 +167,10 @@ namespace BanDongHoTTCS.GUI
             // gridControlDongHo
             // 
             this.gridControlDongHo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gridControlDongHo.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.gridControlDongHo.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(15);
             this.gridControlDongHo.Location = new System.Drawing.Point(0, 51);
             this.gridControlDongHo.MainView = this.gridViewDongHo;
-            this.gridControlDongHo.Margin = new System.Windows.Forms.Padding(15, 15, 15, 15);
+            this.gridControlDongHo.Margin = new System.Windows.Forms.Padding(15);
             this.gridControlDongHo.Name = "gridControlDongHo";
             this.gridControlDongHo.Size = new System.Drawing.Size(1247, 500);
             this.gridControlDongHo.TabIndex = 1;
@@ -326,6 +326,7 @@ namespace BanDongHoTTCS.GUI
             this.txtGia.Name = "txtGia";
             this.txtGia.Size = new System.Drawing.Size(180, 34);
             this.txtGia.TabIndex = 3;
+            this.txtGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGia_KeyPress);
             // 
             // label3
             // 
@@ -339,6 +340,7 @@ namespace BanDongHoTTCS.GUI
             // txtTenDongHo
             // 
             this.txtTenDongHo.Location = new System.Drawing.Point(379, 71);
+            this.txtTenDongHo.MaxLength = 50;
             this.txtTenDongHo.Name = "txtTenDongHo";
             this.txtTenDongHo.Size = new System.Drawing.Size(180, 34);
             this.txtTenDongHo.TabIndex = 2;
@@ -355,9 +357,11 @@ namespace BanDongHoTTCS.GUI
             // txtMaDongHo
             // 
             this.txtMaDongHo.Location = new System.Drawing.Point(379, 15);
+            this.txtMaDongHo.MaxLength = 20;
             this.txtMaDongHo.Name = "txtMaDongHo";
             this.txtMaDongHo.Size = new System.Drawing.Size(180, 34);
             this.txtMaDongHo.TabIndex = 1;
+            this.txtMaDongHo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaDongHo_KeyPress);
             // 
             // label1
             // 

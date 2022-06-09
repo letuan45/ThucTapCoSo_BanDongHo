@@ -163,6 +163,7 @@ namespace BanDongHoTTCS.GUI
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(275, 34);
             this.txtDonGia.TabIndex = 5;
+            this.txtDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDonGia_KeyPress);
             // 
             // FormThemCTDonDatHang
             // 

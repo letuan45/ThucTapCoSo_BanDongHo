@@ -171,9 +171,9 @@ namespace BanDongHoTTCS.GUI
                 MessageBox.Show("Tên không được trống");
                 return false;
             }
-            if (txtSDT.Text.Equals(""))
+            if (!txtSDT.Text.StartsWith("0") || txtSDT.Text.Length != 10)
             {
-                MessageBox.Show("Số điện thoại không được trống");
+                MessageBox.Show("Số điện thoại phải đúng định dạng: Có 10 ký số và bắt đầu bằng 0");
                 return false;
             }
             if (txtHo.Text.Equals(""))
@@ -181,9 +181,9 @@ namespace BanDongHoTTCS.GUI
                 MessageBox.Show("Họ không được trống");
                 return false;
             }
-            if (txtEmail.Text.Equals(""))
+            if (txtEmail.Text.Equals("") || !MyFormat.IsEmail(txtEmail.Text))
             {
-                MessageBox.Show("Email không được trống");
+                MessageBox.Show("Email không hợp lệ");
                 return false;
             }
             if (txtTaiKhoan.Text.Equals(""))
@@ -223,6 +223,38 @@ namespace BanDongHoTTCS.GUI
         private void btnTaiLai_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTaiKhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

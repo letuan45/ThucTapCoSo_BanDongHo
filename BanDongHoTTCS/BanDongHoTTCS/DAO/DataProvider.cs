@@ -13,10 +13,10 @@ namespace DangTinThueTro.DAO
     {
         private static DataProvider instance;
 
-        public const string connectionStrHTDN = "Data Source=LETUAN;Initial Catalog=BanDongHo;User ID=HTDN;Pwd=123456;";
-        public const string connectionStrHTRS = "Data Source=LETUAN;Initial Catalog=master;User ID=HTRS;Pwd=123456;";
-        public const string connectionStrNhanVien = "Data Source=LETUAN;Initial Catalog=BanDongHo;User ID=BanDongHoNhanVien;Pwd=123456;";
-        public const string connectionStrKhachHang = "Data Source=LETUAN;Initial Catalog=BanDongHo;User ID=BanDongHoKhachHang;Pwd=123456;";
+        public const string connectionStrHTDN = "Data Source=THANHTAN;Initial Catalog=BanDongHo;User ID=HTDN;Pwd=123456;";
+        public const string connectionStrHTRS = "Data Source=THANHTAN;Initial Catalog=master;User ID=HTRS;Pwd=123456;";
+        public const string connectionStrNhanVien = "Data Source=THANHTAN;Initial Catalog=BanDongHo;User ID=BanDongHoNhanVien;Pwd=123456;";
+        public const string connectionStrKhachHang = "Data Source=THANHTAN;Initial Catalog=BanDongHo;User ID=BanDongHoKhachHang;Pwd=123456;";
         public static string connectionStr = "";
 
         private SqlConnection connection;

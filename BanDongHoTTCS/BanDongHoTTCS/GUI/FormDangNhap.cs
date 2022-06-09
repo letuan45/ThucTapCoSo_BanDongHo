@@ -62,5 +62,13 @@ namespace BanDongHoTTCS.GUI
                 txtMatKhau.Text = form.MatKhau;
             }
         }
+
+        private void txtTaiKhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

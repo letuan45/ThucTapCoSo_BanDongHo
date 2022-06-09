@@ -44,10 +44,12 @@ namespace BanDongHoTTCS.GUI
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.Location = new System.Drawing.Point(155, 97);
+            this.txtMatKhauMoi.MaxLength = 20;
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.PasswordChar = '*';
             this.txtMatKhauMoi.Size = new System.Drawing.Size(281, 34);
             this.txtMatKhauMoi.TabIndex = 2;
+            this.txtMatKhauMoi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatKhauCu_KeyPress);
             // 
             // label2
             // 
@@ -79,10 +81,12 @@ namespace BanDongHoTTCS.GUI
             // txtNhapLaiMK
             // 
             this.txtNhapLaiMK.Location = new System.Drawing.Point(155, 137);
+            this.txtNhapLaiMK.MaxLength = 20;
             this.txtNhapLaiMK.Name = "txtNhapLaiMK";
             this.txtNhapLaiMK.PasswordChar = '*';
             this.txtNhapLaiMK.Size = new System.Drawing.Size(281, 34);
             this.txtNhapLaiMK.TabIndex = 3;
+            this.txtNhapLaiMK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatKhauCu_KeyPress);
             // 
             // label3
             // 
@@ -96,10 +100,12 @@ namespace BanDongHoTTCS.GUI
             // txtMatKhauCu
             // 
             this.txtMatKhauCu.Location = new System.Drawing.Point(155, 57);
+            this.txtMatKhauCu.MaxLength = 20;
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.PasswordChar = '*';
             this.txtMatKhauCu.Size = new System.Drawing.Size(281, 34);
             this.txtMatKhauCu.TabIndex = 1;
+            this.txtMatKhauCu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMatKhauCu_KeyPress);
             // 
             // label4
             // 

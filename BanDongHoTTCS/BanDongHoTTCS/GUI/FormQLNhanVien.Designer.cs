@@ -206,9 +206,11 @@ namespace BanDongHoTTCS.GUI
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(654, 97);
+            this.txtTaiKhoan.MaxLength = 20;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(336, 34);
             this.txtTaiKhoan.TabIndex = 8;
+            this.txtTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaiKhoan_KeyPress);
             // 
             // label7
             // 
@@ -222,6 +224,7 @@ namespace BanDongHoTTCS.GUI
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(654, 54);
+            this.txtEmail.MaxLength = 128;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(336, 34);
             this.txtEmail.TabIndex = 7;
@@ -256,9 +259,11 @@ namespace BanDongHoTTCS.GUI
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(151, 97);
+            this.txtSDT.MaxLength = 10;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(336, 34);
             this.txtSDT.TabIndex = 4;
+            this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // label3
             // 
@@ -272,16 +277,20 @@ namespace BanDongHoTTCS.GUI
             // txtTen
             // 
             this.txtTen.Location = new System.Drawing.Point(377, 54);
+            this.txtTen.MaxLength = 10;
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(110, 34);
             this.txtTen.TabIndex = 3;
+            this.txtTen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTen_KeyPress);
             // 
             // txtHo
             // 
             this.txtHo.Location = new System.Drawing.Point(151, 54);
+            this.txtHo.MaxLength = 40;
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(220, 34);
             this.txtHo.TabIndex = 2;
+            this.txtHo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHo_KeyPress);
             // 
             // label2
             // 

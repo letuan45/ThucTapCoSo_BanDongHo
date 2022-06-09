@@ -79,23 +79,29 @@ namespace BanDongHoTTCS.GUI
             // txtHo
             // 
             this.txtHo.Location = new System.Drawing.Point(170, 175);
+            this.txtHo.MaxLength = 40;
             this.txtHo.Name = "txtHo";
             this.txtHo.Size = new System.Drawing.Size(200, 34);
             this.txtHo.TabIndex = 4;
+            this.txtHo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHo_KeyPress);
             // 
             // txtTen
             // 
             this.txtTen.Location = new System.Drawing.Point(376, 175);
+            this.txtTen.MaxLength = 10;
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(100, 34);
             this.txtTen.TabIndex = 5;
+            this.txtTen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTen_KeyPress);
             // 
             // txtCMND
             // 
             this.txtCMND.Location = new System.Drawing.Point(170, 215);
+            this.txtCMND.MaxLength = 10;
             this.txtCMND.Name = "txtCMND";
             this.txtCMND.Size = new System.Drawing.Size(306, 34);
             this.txtCMND.TabIndex = 6;
+            this.txtCMND.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             // 
             // label2
             // 
@@ -127,6 +133,7 @@ namespace BanDongHoTTCS.GUI
             // txtDiaChi
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(170, 335);
+            this.txtDiaChi.MaxLength = 128;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(306, 34);
             this.txtDiaChi.TabIndex = 9;
@@ -143,9 +150,11 @@ namespace BanDongHoTTCS.GUI
             // txtSoDienThoai
             // 
             this.txtSoDienThoai.Location = new System.Drawing.Point(170, 375);
+            this.txtSoDienThoai.MaxLength = 10;
             this.txtSoDienThoai.Name = "txtSoDienThoai";
             this.txtSoDienThoai.Size = new System.Drawing.Size(306, 34);
             this.txtSoDienThoai.TabIndex = 10;
+            this.txtSoDienThoai.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             // 
             // label6
             // 
@@ -159,6 +168,7 @@ namespace BanDongHoTTCS.GUI
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(170, 415);
+            this.txtEmail.MaxLength = 128;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(306, 34);
             this.txtEmail.TabIndex = 11;
@@ -175,9 +185,11 @@ namespace BanDongHoTTCS.GUI
             // txtMaSoThue
             // 
             this.txtMaSoThue.Location = new System.Drawing.Point(170, 455);
+            this.txtMaSoThue.MaxLength = 20;
             this.txtMaSoThue.Name = "txtMaSoThue";
             this.txtMaSoThue.Size = new System.Drawing.Size(306, 34);
             this.txtMaSoThue.TabIndex = 12;
+            this.txtMaSoThue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCMND_KeyPress);
             // 
             // label8
             // 
@@ -211,10 +223,12 @@ namespace BanDongHoTTCS.GUI
             // txtXacNhanMK
             // 
             this.txtXacNhanMK.Location = new System.Drawing.Point(170, 115);
+            this.txtXacNhanMK.MaxLength = 20;
             this.txtXacNhanMK.Name = "txtXacNhanMK";
             this.txtXacNhanMK.PasswordChar = '*';
             this.txtXacNhanMK.Size = new System.Drawing.Size(306, 34);
             this.txtXacNhanMK.TabIndex = 3;
+            this.txtXacNhanMK.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaiKhoan_KeyPress);
             // 
             // label11
             // 
@@ -228,10 +242,12 @@ namespace BanDongHoTTCS.GUI
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(170, 75);
+            this.txtMatKhau.MaxLength = 20;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(306, 34);
             this.txtMatKhau.TabIndex = 2;
+            this.txtMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaiKhoan_KeyPress);
             // 
             // label12
             // 
@@ -245,9 +261,11 @@ namespace BanDongHoTTCS.GUI
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(170, 35);
+            this.txtTaiKhoan.MaxLength = 20;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(306, 34);
             this.txtTaiKhoan.TabIndex = 1;
+            this.txtTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaiKhoan_KeyPress);
             // 
             // label13
             // 

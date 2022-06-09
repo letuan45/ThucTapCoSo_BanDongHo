@@ -58,9 +58,9 @@ namespace BanDongHoTTCS.GUI
                 MessageBox.Show("Bạn phải điền đủ họ tên");
                 return false;
             }
-            if (txtCMND.Text.Equals(""))
+            if (txtCMND.Text.Length != 10)
             {
-                MessageBox.Show("CMND/CCCD không được trống");
+                MessageBox.Show("CMND/CCCD phải có đúng 10 ký số");
                 return false;
             }
             if (txtDiaChi.Text.Equals(""))
@@ -71,6 +71,11 @@ namespace BanDongHoTTCS.GUI
             if (txtSoDienThoai.Text.Equals(""))
             {
                 MessageBox.Show("Số điện thoại không được trống");
+                return false;
+            }
+            if (!txtEmail.Text.Equals("") && !MyFormat.IsEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Email không hợp lệ");
                 return false;
             }
             return true;
@@ -111,6 +116,38 @@ namespace BanDongHoTTCS.GUI
             if (InputHopLe())
             {
                 DangKyKhachHang();
+            }
+        }
+
+        private void txtTaiKhoan_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtHo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtTen_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCMND_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

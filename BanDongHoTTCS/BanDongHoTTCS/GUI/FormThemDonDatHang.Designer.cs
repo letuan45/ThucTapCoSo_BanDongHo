@@ -53,9 +53,11 @@ namespace BanDongHoTTCS.GUI
             // txtMaDonDatHang
             // 
             this.txtMaDonDatHang.Location = new System.Drawing.Point(185, 16);
+            this.txtMaDonDatHang.MaxLength = 20;
             this.txtMaDonDatHang.Name = "txtMaDonDatHang";
             this.txtMaDonDatHang.Size = new System.Drawing.Size(275, 34);
             this.txtMaDonDatHang.TabIndex = 1;
+            this.txtMaDonDatHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaDonDatHang_KeyPress);
             // 
             // label2
             // 

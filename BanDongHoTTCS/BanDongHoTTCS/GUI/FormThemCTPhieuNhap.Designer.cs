@@ -110,6 +110,7 @@ namespace BanDongHoTTCS.GUI
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.Size = new System.Drawing.Size(275, 30);
             this.txtDonGia.TabIndex = 17;
+            this.txtDonGia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDonGia_KeyPress);
             // 
             // label3
             // 

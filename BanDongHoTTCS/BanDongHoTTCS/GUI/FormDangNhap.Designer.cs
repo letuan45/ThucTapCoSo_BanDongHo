@@ -50,19 +50,23 @@ namespace BanDongHoTTCS.GUI
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.Location = new System.Drawing.Point(125, 84);
+            this.txtTaiKhoan.MaxLength = 20;
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(281, 34);
             this.txtTaiKhoan.TabIndex = 1;
             this.txtTaiKhoan.Text = "qtv";
+            this.txtTaiKhoan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaiKhoan_KeyPress);
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(125, 129);
+            this.txtMatKhau.MaxLength = 20;
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(281, 34);
             this.txtMatKhau.TabIndex = 3;
             this.txtMatKhau.Text = "123456";
+            this.txtMatKhau.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTaiKhoan_KeyPress);
             // 
             // label2
             // 
@@ -101,9 +105,9 @@ namespace BanDongHoTTCS.GUI
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(23, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(342, 41);
+            this.label4.Size = new System.Drawing.Size(312, 41);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Đăng nhập khách hàng";
+            this.label4.Text = "Đăng nhập tài khoản";
             // 
             // FormDangNhap
             // 

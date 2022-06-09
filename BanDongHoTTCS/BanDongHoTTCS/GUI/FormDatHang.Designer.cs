@@ -221,9 +221,11 @@ namespace BanDongHoTTCS.GUI
             // 
             this.txtSdtKh.Location = new System.Drawing.Point(704, 17);
             this.txtSdtKh.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtSdtKh.MaxLength = 10;
             this.txtSdtKh.Name = "txtSdtKh";
             this.txtSdtKh.Size = new System.Drawing.Size(231, 34);
             this.txtSdtKh.TabIndex = 9;
+            this.txtSdtKh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSdtKh_KeyPress);
             // 
             // label2
             // 

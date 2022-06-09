@@ -65,5 +65,13 @@ namespace BanDongHoTTCS.GUI
             if (InputHopLe())
                 ThemDonDatHang();
         }
+
+        private void txtMaDonDatHang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -84,7 +84,10 @@ namespace BanDongHoTTCS.GUI
                 pictureBoxHinhAnh.Image = pictureBoxHinhAnh.ErrorImage;
                 MessageBox.Show(e.Message);
             }
-            btnNgungKinhDoanh.Enabled = btnSua.Enabled = dongHo.TrangThai.Equals("Ngừng kinh doanh") ? false : true;
+            if(chucNangThucThi == -1)
+            {
+                btnNgungKinhDoanh.Enabled = btnSua.Enabled = dongHo.TrangThai.Equals("Ngừng kinh doanh") ? false : true;
+            }
         }
         private void ResetTatCaComponent()
         {
@@ -353,13 +356,20 @@ namespace BanDongHoTTCS.GUI
         {
             if(listDongHo.Count > 0)
             {
-                DongHo dongHo = listDongHo[bindingSource.Position];
-                if (DongHoDAO.Instance.NgungKinhDoanhSP(dongHo.MaDongHo))
+                DialogResult result = MessageBox.Show(
+                    "Bạn có thực sự muốn ngừng kinh doanh sản phẩm này?\nSau khi thực hiện sẽ không thể kinh doanh lại",
+                    "Ngừng kinh doanh sản phẩm",
+                    MessageBoxButtons.YesNoCancel);
+                if(result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Ngừng kinh doanh sản phẩm thành công");
+                    DongHo dongHo = listDongHo[bindingSource.Position];
+                    if (DongHoDAO.Instance.NgungKinhDoanhSP(dongHo.MaDongHo))
+                    {
+                        MessageBox.Show("Ngừng kinh doanh sản phẩm thành công");
+                    }
+                    else
+                        MessageBox.Show("Ngừng kinh doanh sản phẩm thất bại");
                 }
-                else
-                    MessageBox.Show("Ngừng kinh doanh sản phẩm thất bại");
             }
         }
         private void btnTaiLai_Click(object sender, EventArgs e)
@@ -381,6 +391,22 @@ namespace BanDongHoTTCS.GUI
                     hinhAnh = openFileDialogChonAnh.FileName;
                     pictureBoxHinhAnh.Image = Image.FromFile(hinhAnh);
                 }
+            }
+        }
+
+        private void txtMaDongHo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtGia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
